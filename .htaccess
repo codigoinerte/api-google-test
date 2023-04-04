@@ -1,0 +1,7 @@
+# Activar el mod_rewrite
+RewriteEngine On
+
+# Redireccionar a la versión sin extensión
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)\.php$ /$1 [L,QSA]
