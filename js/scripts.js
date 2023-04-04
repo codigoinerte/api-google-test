@@ -1,7 +1,11 @@
-let client_id = '495147047249-1spimj483r8arakm7qr9ld0ftht0d8vr.apps.googleusercontent.com';
-let client_secret = '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';
+//let client_id = '495147047249-1spimj483r8arakm7qr9ld0ftht0d8vr.apps.googleusercontent.com';
+//let client_secret = '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';
+
+let client_id = '355558484550-ea8as6m5f9k27tt82hbl5kv5hkjimebf.apps.googleusercontent.com';
+let client_secret = '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';
+
 //let redirect_uri = document.location.href.replace(/\/$/, "");
-let redirect_uri = "https://api-google-test-production.up.railway.app";
+let redirect_uri = "https://localhost";
 
 const dta = {
     client_id,
@@ -14,14 +18,18 @@ const dta = {
 
       const { authuser, code, hd, prompt, scope } = tokenResponse;
 
+      
       const datos = {
-          code,
-          redirect_uri
-      };
+        code,
+        redirect_uri,
+        sip:"google"
+    }
 
       try {
         
-          fetch('http://localhost/google/app/app.php',{
+          //fetch('http://localhost/google/app/app.php',{
+          //fetch('https://monomeric-reduction.000webhostapp.com/index.php',{
+          fetch('https://api-google-test-production.up.railway.app',{
             method:'POST',
             headers: {
               "Content-Type": "application/json"
