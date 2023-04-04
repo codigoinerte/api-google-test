@@ -1,7 +1,7 @@
 let client_id = '495147047249-1spimj483r8arakm7qr9ld0ftht0d8vr.apps.googleusercontent.com';
 let client_secret = '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';
 //let redirect_uri = document.location.href.replace(/\/$/, "");
-let redirect_uri = "http://localhost";
+let redirect_uri = "https://api-google-test-production.up.railway.app";
 
 const dta = {
     client_id,
